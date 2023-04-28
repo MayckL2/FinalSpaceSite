@@ -75,6 +75,8 @@ body {
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .setaTopo:hover img {
@@ -127,7 +129,8 @@ section {
 .primeira p {
   font-size: 30px;
   opacity: 0.2;
-  position: relative;
+  position: absolute;
+  bottom: 100px;
 }
 .primeira p img {
   position: absolute;
