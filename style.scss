@@ -103,6 +103,7 @@ header{
 section{
     height: 100vh;
     position: relative;
+    padding: 0px 20px;
 }
 
 .primeira{
@@ -111,6 +112,8 @@ section{
     align-items: center;
     justify-content: center;
     gap: 50px;
+    padding: 20px;
+
 
     h1{
         width: 80%;
@@ -132,6 +135,8 @@ section{
         opacity: 0.2;
         position: absolute;
         bottom: 100px;
+        text-align: center;
+        width: 90%;
 
         img{
             position: absolute;
@@ -140,4 +145,21 @@ section{
             animation: flutua 2s infinite;
         }
     }
+}
+
+.segunda{
+  display: flex;
+  justify-content: center;
+
+  h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+
+  img{
+    position: relative;
+    animation: flutua 2s ease infinite;
+  }
 }

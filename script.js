@@ -1,6 +1,6 @@
 // fecha tela de carregamento
 function delay(){
-    setTimeout(fechaCarregando, 2000)
+    setTimeout(fechaCarregando, 0000)
 }
 
 function fechaCarregando(){

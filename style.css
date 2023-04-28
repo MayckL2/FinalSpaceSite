@@ -105,6 +105,7 @@ header a:hover {
 section {
   height: 100vh;
   position: relative;
+  padding: 0px 20px;
 }
 
 .primeira {
@@ -113,6 +114,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  padding: 20px;
 }
 .primeira h1 {
   width: 80%;
@@ -131,10 +133,27 @@ section {
   opacity: 0.2;
   position: absolute;
   bottom: 100px;
+  text-align: center;
+  width: 90%;
 }
 .primeira p img {
   position: absolute;
   rotate: 180deg;
   width: 50px;
   animation: flutua 2s infinite;
+}
+
+.segunda {
+  display: flex;
+  justify-content: center;
+}
+.segunda h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+.segunda img {
+  position: relative;
+  animation: flutua 2s ease infinite;
 }/*# sourceMappingURL=style.css.map */
