@@ -1,0 +1,140 @@
+*{
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+}
+
+// tela de carregamento
+.carregando {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/image\ 3\ 1.svg);
+    background-size: cover;
+    z-index: 5;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+
+    div {
+        margin-top: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 300px;
+            position: relative;
+            animation: flutua 2s ease-in infinite;
+        }
+        @keyframes flutua {
+            0%{
+                top: 10px;
+            }
+            50%{
+                top: 0px;
+            }
+            100%{
+                top: 10px;
+            }
+        }
+        p{
+            margin: 20px 0;
+            font-weight: bold;
+
+            span::after{
+                animation: pontinhos 2s  infinite;
+                content: "";
+            }
+            @keyframes pontinhos {
+                0%{content: ""}
+                30%{content: "."}
+                60%{content: ".."}
+                100%{content: "..."}
+            }
+        }
+    }
+}
+
+.setaTopo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+
+    img{
+        width: 50px;
+        transition: all 0.5s;
+    }
+}
+
+body{
+    background-image: url(img/fundo\ space\ 2.svg);
+    backdrop-filter: blur(1px);
+    background-attachment: fixed;
+}
+
+.setaTopo:hover img{
+    scale: 1.2;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        transition: all 0.5s;
+    }
+    a:hover{
+        text-shadow: 1px 1px 20px white;
+        color: #BABDE0;
+    }
+}
+
+section{
+    height: 100vh;
+    position: relative;
+}
+
+.primeira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    h1{
+        width: 80%;
+        text-align: center;
+
+        img{
+            width: 200px;
+        }
+    }
+
+    .garySpace{
+        width: 200px;
+        position: relative;
+        animation: flutua 2s infinite;
+    }
+
+    p{
+        font-size: 30px;
+        opacity: 0.2;
+        position: relative;
+
+        img{
+            position: absolute;
+            rotate: 180deg;
+            width: 50px;
+            animation: flutua 2s infinite;
+        }
+    }
+}
