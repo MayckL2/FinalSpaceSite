@@ -73,7 +73,7 @@
 }
 
 body {
-  background-image: url(img/fundo\ space\ 2.svg);
+  background-image: url(img/fundo\ space\ 2.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -204,7 +204,7 @@ section {
   }
 }
 .quarta {
-  background-image: url(img/fundoNave\ 1.svg);
+  background-image: url(img/fundoNave\ 1.png);
   width: 105%;
   display: grid;
   place-items: center;
@@ -231,12 +231,13 @@ section {
 .modalPerson {
   background-image: url(img/modal.png);
   width: 700px;
-  height: 80vh;
-  background-size: contain;
+  height: 500px;
+  background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
-  top: 50px;
-  left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: none;
   align-items: center;
@@ -244,11 +245,13 @@ section {
   gap: 50px;
 }
 .modalPerson img {
-  border: solid;
   -o-object-fit: cover;
      object-fit: cover;
   width: 200px;
-  height: 60%;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
 .modalPerson .nome {
   font-size: 30px;
@@ -257,8 +260,11 @@ section {
 .modalPerson div {
   text-align: center;
   width: 40%;
-  height: 60%;
+  height: 300px;
   border: solid;
+  position: absolute;
+  top: 100px;
+  right: 70px;
 }
 
 @media (max-width: 700px) {
@@ -270,7 +276,14 @@ section {
     background-size: cover;
     padding: 10px;
   }
-  .modalPerson div {
+  .modalPerson div, .modalPerson img {
     width: 90%;
+  }
+  .modalPerson img {
+    left: 5%;
+  }
+  .modalPerson div {
+    top: 400px;
+    left: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
