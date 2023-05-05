@@ -1,7 +1,7 @@
 let personImg = document.querySelector(".modalPerson img");
 let personNanme = document.querySelector(".modalPerson div .nome");
 let personDesc = document.querySelector(".modalPerson div .desc");
-let modal = document.querySelector(".modalPerson");
+const modal = document.querySelector(".modalPerson");
 
 // fecha tela de carregamento
 function delay() {
@@ -85,3 +85,5 @@ function modalPerson(e) {
       break;
   }
 }
+
+// fazer export de algum jeito
