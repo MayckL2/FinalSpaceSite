@@ -2,162 +2,193 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Space - Site</title>
-    <link rel="icon" href="img/garyIcon.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Space - Site</title>
+  <link rel="icon" href="img/garyIcon.png">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!-- fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+  <!-- fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
 
-    <!-- carrossel -->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- carrossel -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
 
 </head>
 
 <body onload="delay()">
-    <div class="carregando">
-        <div>
-            <img src="img/image 1.png" alt="">
-            <p>CARREGANDO<span></span></p>
-        </div>
+  <div class="carregando">
+    <div>
+      <img src="img/image 1.png" alt="">
+      <p>CARREGANDO<span></span></p>
+    </div>
+  </div>
+
+  <img onmousedown="abreMenu()" class="menu" src="img/menu.png" alt="menu">
+
+  <header id="topo">
+    <a href="saibaMais.html">Saiba mais</a>
+    <a href="#personagens">Personagens</a>
+    <a href="#sinopse">Sinopse</a>
+
+    <button onmousedown="fechaMenu()">x</button>
+  </header>
+
+  <a class="setaTopo" href="#topo">
+    <img src="img/arrow 1.svg" alt="">
+  </a>
+
+  <main>
+    <section class="primeira">
+      <h1>CONHEÇA O <span class="text-danger">PERIGOSO</span> UNIVERSO DE <br><img src="img/Final_Space_Logo.svg"
+          alt=""></h1>
+
+      <img class="garySpace" src="img/garySpace.png" alt="">
+
+      <p class="marcaDagua">role a pagina para ver mais
+        <img src="img/arrow 1.svg" alt="">
+      </p>
+    </section>
+
+    <section class="segunda row" id="sinopse">
+      <h2 class="col-md-5">Acompanhe a emocionante historia do “capitão” Gary Goodspeed, abordo sua nave/prisão atraves
+        da galaxia.</h2>
+
+      <img class="col-md-5" src="img/space ship.png" alt="espaço nave">
+    </section>
+
+    <section class="terceira row">
+      <h2 class="col-md-5">Cortando o papo furado, gary era um zé niguem que tentou enganar uma guardia da infinidade
+        fingindo ser um, entao ele explodiu algumas coisas, foi condenado ha 5 anos trabalhando como mecanico em uma
+        nave que ele pensa que é o capitão, entao ele encontra uma bolha verde que destroi mundos que ele chama de
+        mooncake, e tem uma baixinho que faz telecinese atras dos poderes do mooncake</h2>
+
+      <div class="col-md-5">
+        <img id="img1" src="img/garyArrested 1.png" alt="gary sendo preso">
+        <img id="img2" src="img/garyMechanic 1.png" alt="gary como mecanico">
+        <img id="img3" src="img/garyMoonCake 1.png" alt="gary e mooncake">
+        <img id="img4" src="img/lordBravo 1.png" alt="lord commander">
+      </div>
+    </section>
+
+    <div class="modalPerson">
+      <img class="fechaModal" onmousedown="fechaModal()" src="img/letra-x.png" alt="fecha modal">
+
+      <img class="fotoPerson" src="" alt="">
+
+      <div>
+        <p class="nome">Nome</p>
+
+        <p class="desc">Descriçao</p>
+      </div>
     </div>
 
-    <header id="topo">
-        <a href="">Saiba mais</a>
-        <a href="">Personagens</a>
-        <a href="">Sinopse</a>
-    </header>
+    <section class="quarta" id="personagens">
+      <h3>Conheça alguns Personagens do universo de final space</h3>
 
-    <a class="setaTopo" href="#topo">
-        <img src="img/arrow 1.svg" alt="">
-    </a>
-
-    <main>
-        <section class="primeira">
-            <h1>CONHEÇA O <span class="text-danger">PERIGOSO</span> UNIVERSO DE <br><img src="img/Final_Space_Logo.svg" alt=""></h1>
-        
-            <img class="garySpace" src="img/garySpace.png" alt="">
-
-            <p class="marcaDagua">role a pagina para ver mais
-                <img src="img/arrow 1.svg" alt="">
-            </p>
-        </section>
-
-        <section class="segunda row">
-            <h2 class="col-md-5">Acompanhe a emocionante historia do “capitão” Gary Goodspeed, abordo sua nave/prisão atraves da galaxia.</h2>
-            
-            <img class="col-md-5" src="img/galaxy1 1.svg" alt="espaço nave">
-        </section>
-
-        <section class="terceira row">
-            <h2 class="col-md-5">Cortando o papo furado, gary era um zé niguem que tentou enganar uma guardia da infinidade fingindo ser um, entao ele explodiu algumas coisas, foi condenado ha 5 anos trabalhando como mecanico em uma nave que ele pensa que é o capitão, entao ele encontra uma bolha verde que destroi mundos que ele chama de mooncake, e tem uma baixinho que faz telecinese atras dos poderes do mooncake</h2>
-
-            <div class="col-md-5">
-                <img id="img1" src="img/garyArrested 1.png" alt="gary sendo preso">
-                <img id="img2" src="img/garyMechanic 1.png" alt="gary como mecanico">
-                <img id="img3" src="img/garyMoonCake 1.png" alt="gary e mooncake">
-                <img id="img4" src="img/lordBravo 1.png" alt="lord commander">
-            </div>
-        </section>
-
-        <div class="modalPerson">
-            <img src="" alt="">
-
-            <div>
-                <p class="nome">Nome</p>
-
-                <p class="desc">Descriçao</p>
-            </div>
-        </div>
-
-        <section class="quarta">
-            <h3>Conheça alguns Personagens do universo de final space</h3>
-
-            <!-- carrossel -->
-            <div class="carousel" data-flickity='{ 
+      <!-- carrossel -->
+      <div class="carousel" data-flickity='{ 
                 "wrapAround": true,
                 "autoPlay": true,
                 "draggable": false
               }'>
-                <div onmousedown="modalPerson(1)" class="carousel-cell">
-                    <img src="img/carrossel/Group 1.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(2)" class="carousel-cell">
-                    <img src="img/carrossel/Group 2.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(3)" class="carousel-cell">
-                    <img src="img/carrossel/Group 3.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(4)" class="carousel-cell">
-                    <img src="img/carrossel/Group 4.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(5)" class="carousel-cell">
-                    <img src="img/carrossel/Group 5.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(6)" class="carousel-cell">
-                    <img src="img/carrossel/Group 6.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(7)" class="carousel-cell">
-                    <img src="img/carrossel/Group 7.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(8)" class="carousel-cell">
-                    <img src="img/carrossel/Group 8.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(9)" class="carousel-cell">
-                    <img src="img/carrossel/Group 9.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(10)" class="carousel-cell">
-                    <img src="img/carrossel/Group 10.png" alt="">
-                </div>
-                <div onmousedown="modalPerson(11)" class="carousel-cell">
-                    <img src="img/carrossel/Group 11.png" alt="">
-                </div>
-                    
-            </div>
-        </section>
-
-        <section class="quinta">
-            <img src="img/Mooncake 1.svg" alt="">
-
-            <div>
-                <h3>CONHEÇA MAIS SOBRE O DESENHO ANIMADO FINAL SPACE</h3>
-                <a href="">Saiba Mais</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <img src="" alt="">
-
-        <div>
-            <a href="">Saiba mais</a>
-            <a href="">Personagens</a>
-            <a href="">Sinopse</a>
+        <div onmousedown="modalPerson(1)" class="carousel-cell">
+          <img src="img/carrossel/Group 1.png" alt="">
+          <!-- <img src="img/fotoPersons/Gary_Goodspeed.webp" alt=""> -->
+        </div>
+        <div onmousedown="modalPerson(2)" class="carousel-cell">
+          <img src="img/carrossel/Group 2.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(3)" class="carousel-cell">
+          <img src="img/carrossel/Group 3.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(4)" class="carousel-cell">
+          <img src="img/carrossel/Group 4.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(5)" class="carousel-cell">
+          <img src="img/carrossel/Group 5.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(6)" class="carousel-cell">
+          <img src="img/carrossel/Group 6.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(7)" class="carousel-cell">
+          <img src="img/carrossel/Group 7.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(8)" class="carousel-cell">
+          <img src="img/carrossel/Group 8.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(9)" class="carousel-cell">
+          <img src="img/carrossel/Group 9.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(10)" class="carousel-cell">
+          <img src="img/carrossel/Group 10.png" alt="">
+        </div>
+        <div onmousedown="modalPerson(11)" class="carousel-cell">
+          <img src="img/carrossel/Group 11.png" alt="">
         </div>
 
-        <p>FEITO POR <a href="">MAYCK LUCIANO</a></p>
-    </footer>
+      </div>
+    </section>
 
-    <!-- script -->
-    <script src="script.js"></script>
-    <script src="fechamodal.js"></script>
+    <section class="quinta">
+      <img src="img/Mooncake 1.svg" alt="">
 
-    <!-- carrossel -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <div>
+        <h3>CONHEÇA MAIS SOBRE O DESENHO ANIMADO FINAL SPACE</h3>
+        <a href="">Saiba Mais</a>
+      </div>
+    </section>
+  </main>
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+  <footer>
+    <!-- <img src="img/Final_Space_Logo.svg" alt=""> -->
+
+    <ul>
+      <li>
+        <a href="saibaMais.html">Saiba mais</a>
+        <a class="subLink" href="saibaMais.html">Onde assistir</a>
+        <a class="subLink" href="saibaMais.html">Temporadas</a>
+        <a class="subLink" href="saibaMais.html">Sinopse</a>
+      </li>
+      <li>
+        <a href="#personagens">Personagens</a>
+        <a class="subLink" href="#personagens">Gary</a>
+        <a class="subLink" href="#personagens">Avocato</a>
+        <a class="subLink" href="#personagens">Hue</a>
+      </li>
+      <li>
+        <a href="#sinopse">Sinopse</a>
+        <a class="subLink" href="#sinopse">Historia</a>
+        <a class="subLink" href="#sinopse">Origem</a>
+      </li>
+    </ul>
+
+    <p>FEITO POR <a href="">MAYCK LUCIANO</a></p>
+  </footer>
+
+  <!-- script -->
+  <script src="script.js"></script>
+  <script src="fechamodal.js"></script>
+
+  <!-- carrossel -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

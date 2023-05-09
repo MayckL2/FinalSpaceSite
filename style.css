@@ -5,6 +5,10 @@
   padding: 0px;
 }
 
+@font-face {
+  font-family: "fontModal";
+  src: url(BrunoAceSC-Regular.ttf);
+}
 .carregando {
   position: fixed;
   width: 100%;
@@ -90,6 +94,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  transition: all 0.5s;
 }
 header a {
   color: white;
@@ -98,8 +103,17 @@ header a {
   transition: all 0.5s;
 }
 header a:hover {
-  text-shadow: 1px 1px 20px white;
-  color: #BABDE0;
+  color: red;
+}
+header button {
+  color: white;
+  font-size: 50px;
+  font-family: sans-serif;
+  background-color: transparent;
+  border: 5px white outset;
+  border-radius: 50%;
+  padding: 0px 25px;
+  display: none;
 }
 
 main {
@@ -156,10 +170,13 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 40px;
+  text-align: center;
 }
 .segunda img {
   position: relative;
   animation: flutua 2s ease infinite;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .terceira {
@@ -239,32 +256,56 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  animation: surge 0.5s ease;
   display: none;
   align-items: center;
   justify-content: center;
   gap: 50px;
 }
-.modalPerson img {
-  -o-object-fit: cover;
-     object-fit: cover;
+@keyframes surge {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modalPerson .fotoPerson {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 200px;
   height: 300px;
   position: absolute;
   top: 100px;
   left: 100px;
 }
+.modalPerson .fechaModal {
+  width: 50px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.modalPerson .fechaModal:hover {
+  filter: grayscale(1);
+}
 .modalPerson .nome {
   font-size: 30px;
+  font-family: "fontModal";
   font-style: italic;
 }
 .modalPerson div {
   text-align: center;
   width: 40%;
   height: 300px;
-  border: solid;
   position: absolute;
   top: 100px;
   right: 70px;
+}
+.modalPerson div .desc {
+  font-family: "fontModal";
+  font-size: 12px;
 }
 
 @media (max-width: 700px) {
@@ -275,15 +316,159 @@ section {
     background-image: url(img/hall.png);
     background-size: cover;
     padding: 10px;
+    height: 90%;
   }
-  .modalPerson div, .modalPerson img {
+  .modalPerson div,
+  .modalPerson .fotoPerson {
     width: 90%;
-  }
-  .modalPerson img {
     left: 5%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .modalPerson div {
     top: 400px;
     left: 5%;
+  }
+}
+.carousel-cell {
+  cursor: pointer;
+}
+
+.quinta {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-content: center;
+  position: relative;
+}
+.quinta img {
+  position: relative;
+  animation: flutua 2s ease infinite;
+}
+.quinta div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 50px;
+}
+.quinta h3 {
+  width: 80%;
+  font-size: 50px;
+  text-align: center;
+}
+.quinta a {
+  text-decoration: none;
+  color: black;
+  background-color: #A8FF7D;
+  padding: 10px 30px;
+  font-size: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.quinta a:hover {
+  filter: grayscale(20);
+  box-shadow: 1px 1px 20px white;
+}
+
+@media (max-width: 1000px) {
+  .quinta img {
+    margin: 0 auto;
+  }
+  .quinta {
+    grid-template-columns: auto;
+  }
+  .quinta div {
+    align-items: center;
+  }
+}
+@media (max-width: 450px) {
+  .quinta {
+    height: auto;
+  }
+}
+footer {
+  background-color: black;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+  padding: 0px;
+}
+footer ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+footer ul li .subLink {
+  font-size: 20px;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+footer ul li .subLink:hover {
+  opacity: 1;
+}
+footer a {
+  text-decoration: none;
+}
+footer p {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  footer {
+    flex-direction: column;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+}
+.menu {
+  width: 60px;
+  filter: invert(50);
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    display: block;
+  }
+  header {
+    position: fixed;
+    top: 0px;
+    background-color: red;
+    height: 100vh;
+    padding: 20px;
+    z-index: 1;
+    right: -500px;
+    flex-direction: column;
+    z-index: 2;
+  }
+  header a:hover {
+    color: black;
+  }
+  header button {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
